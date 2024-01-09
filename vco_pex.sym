@@ -2,7 +2,7 @@ v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {type=primitive
-format="@name @@VDD @@OUT @@vctrl @@VCNB @@VCNS @@VSS @prefix"
+format="@name @@VDD @@VCTRL @@OUT @@VCNB @@VCNS @@VSS @prefix"
 template="name=x1 prefix=TOP"
 extra="prefix"
 highlight=true
@@ -22,7 +22,7 @@ L 7 130 -20 150 -20 {}
 L 7 130 20 150 20 {}
 B 5 147.5 -22.5 152.5 -17.5 {name=VDD dir=inout}
 B 5 147.5 -2.5 152.5 2.5 {name=OUT dir=OUT}
-B 5 -152.5 -22.5 -147.5 -17.5 {name=vctrl dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=VCTRL dir=in}
 B 5 -152.5 -2.5 -147.5 2.5 {name=VCNB dir=in}
 B 5 -152.5 17.5 -147.5 22.5 {name=VCNS dir=in}
 B 5 147.5 17.5 152.5 22.5 {name=VSS dir=inout}
@@ -30,7 +30,7 @@ T {@symname} -49.5 -6 0 0 0.3 0.3 {}
 T {@name} 135 -42 0 0 0.2 0.2 {}
 T {VDD} 125 -24 0 1 0.2 0.2 {}
 T {OUT} 125 -4 0 1 0.2 0.2 {}
-T {vctrl} -125 -24 0 0 0.2 0.2 {}
+T {VCTRL} -125 -24 0 0 0.2 0.2 {}
 T {VCNB} -125 -4 0 0 0.2 0.2 {}
 T {VCNS} -125 16 0 0 0.2 0.2 {}
 T {VSS} 125 16 0 1 0.2 0.2 {}

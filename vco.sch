@@ -6,9 +6,9 @@ V {}
 S {}
 E {}
 N 300 -460 300 -350 {
-lab=out}
+lab=OUT}
 N 300 -350 360 -350 {
-lab=out}
+lab=OUT}
 N -410 -520 -410 -420 {
 lab=#net1}
 N -410 -610 -410 -580 {
@@ -54,9 +54,9 @@ lab=#net2}
 N -100 -260 40 -260 {
 lab=#net2}
 N -510 -390 -490 -390 {
-lab=vctrl}
+lab=VCTRL}
 N -490 -390 -450 -390 {
-lab=vctrl}
+lab=VCTRL}
 N 660 -350 710 -350 {
 lab=#net4}
 N 1010 -350 1060 -350 {
@@ -66,11 +66,11 @@ lab=#net6}
 N 1710 -350 1760 -350 {
 lab=#net7}
 N 2060 -350 2230 -350 {
-lab=out}
+lab=OUT}
 N 300 -460 2140 -460 {
-lab=out}
+lab=OUT}
 N 2140 -460 2140 -350 {
-lab=out}
+lab=OUT}
 N 40 -320 40 -260 {
 lab=#net2}
 N 40 -260 2230 -260 {
@@ -177,10 +177,10 @@ N -500 -180 -410 -180 {
 lab=VSS}
 N -510 -620 -410 -620 {
 lab=VDD}
-C {devices/opin.sym} 2140 -460 0 0 {name=p1 lab=out}
+C {devices/opin.sym} 2140 -460 0 0 {name=p1 lab=OUT}
 C {symbols/pfet_03v3.sym} -160 -550 0 0 {name=M25
 L=0.33u
-W=1.8u
+W=0.9u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -194,7 +194,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} -390 -550 0 1 {name=M26
 L=0.33u
-W=1.8u
+W=0.9u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -222,7 +222,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} -120 -260 0 1 {name=M28
 L=0.33u
-W=0.7u
+W=0.42u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -234,7 +234,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_dn
 spiceprefix=X
 }
-C {devices/ipin.sym} -510 -390 0 0 {name=p2 lab=vctrl}
+C {devices/ipin.sym} -510 -390 0 0 {name=p2 lab=VCTRL}
 C {vco_inverter.sym} 510 -350 0 0 {name=x1}
 C {vco_inverter.sym} 860 -350 0 0 {name=x2}
 C {vco_inverter.sym} 1210 -350 0 0 {name=x3}
@@ -275,7 +275,7 @@ C {devices/iopin.sym} -510 -620 0 1 {name=p3 lab=VDD}
 C {devices/iopin.sym} -500 -180 0 1 {name=p4 lab=VSS}
 C {symbols/ppolyf_u.sym} -410 -260 0 0 {name=R1
 W=0.8e-6
-L=520e-6
+L=260e-6
 model=ppolyf_u
 spiceprefix=X
 m=1}

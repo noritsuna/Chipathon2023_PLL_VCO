@@ -1,42 +1,42 @@
-** sch_path: /home/noritsuna/pll/sample/gf180_pll_3v3/noritsuna/VCO.sch
-.subckt TOP VDD out vctrl VCNB VCNS VSS
-*.PININFO out:O vctrl:I VCNB:I VCNS:I VDD:B VSS:B
-M25 net2 net1 VDD VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
-M26 net1 net1 VDD VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
-M27 net1 vctrl net3 VSS nfet_03v3_dn L=0.33u W=0.8u nf=1 m=1
-M28 net2 net2 VSS VSS nfet_03v3_dn L=0.33u W=0.7u nf=1 m=1
-x1 VDD net1 out net4 net2 VSS vco_inverter
+** sch_path: /home/noritsuna/pll/Chipathon2023_PLL_VCO/vco.sch
+.subckt TOP OUT VCTRL VCNB VCNS VDD VSS
+*.PININFO OUT:O VCTRL:I VCNB:I VCNS:I VDD:B VSS:B
+M25 net2 net1 VDD VDD pfet_03v3 L=0.33u W=0.9u nf=1 m=1
+M26 net1 net1 VDD VDD pfet_03v3 L=0.33u W=0.9u nf=1 m=1
+M27 net1 VCTRL net3 VSS nfet_03v3_dn L=0.33u W=0.8u nf=1 m=1
+M28 net2 net2 VSS VSS nfet_03v3_dn L=0.33u W=0.42u nf=1 m=1
+x1 VDD net1 OUT net4 net2 VSS vco_inverter
 x2 VDD net1 net4 net5 net2 VSS vco_inverter
 x3 VDD net1 net5 net6 net2 VSS vco_inverter
 x4 VDD net1 net6 net7 net2 VSS vco_inverter
-x5 VDD net1 net7 out net2 VSS vco_inverter
-x6 VDD net1 out net2 VSS vco_inverter_end
+x5 VDD net1 net7 OUT net2 VSS vco_inverter
+x6 VDD net1 OUT net2 VSS vco_inverter_end
 M7 net1 VCNB net8 VSS nfet_03v3_dn L=0.33u W=8u nf=1 m=1
 M8 net8 VCNS VSS VSS nfet_03v3_dn L=0.33u W=8u nf=1 m=1
-R1 net3 VSS VSS ppolyf_u W=0.8e-6 L=520e-6 m=1
+R1 VSS net3 VSS ppolyf_u W=0.8e-6 L=260e-6 m=1
 .ends
 
 * expanding   symbol:  vco_inverter.sym # of pins=6
-** sym_path: /home/noritsuna/pll/sample/gf180_pll_3v3/noritsuna/vco_inverter.sym
-** sch_path: /home/noritsuna/pll/sample/gf180_pll_3v3/noritsuna/vco_inverter.sch
+** sym_path: /home/noritsuna/pll/Chipathon2023_PLL_VCO/vco_inverter.sym
+** sch_path: /home/noritsuna/pll/Chipathon2023_PLL_VCO/vco_inverter.sch
 .subckt vco_inverter VDD VC_P A Y VC_N VSS
 *.PININFO VDD:B VSS:B A:I VC_N:I VC_P:I Y:O
-M1 net1 VC_P VDD VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
-M2 Y A net1 VDD pfet_03v3 L=0.33u W=3.6u nf=1 m=1
-M3 Y A net2 VSS nfet_03v3_dn L=0.33u W=1.4u nf=1 m=1
-M4 net2 VC_N VSS VSS nfet_03v3_dn L=0.33u W=0.7u nf=1 m=1
+M1 net1 VC_P VDD VDD pfet_03v3 L=0.33u W=0.9u nf=1 m=1
+M2 Y A net1 VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
+M3 Y A net2 VSS nfet_03v3_dn L=0.33u W=0.84u nf=1 m=1
+M4 net2 VC_N VSS VSS nfet_03v3_dn L=0.33u W=0.42u nf=1 m=1
 .ends
 
 
 * expanding   symbol:  vco_inverter_end.sym # of pins=5
-** sym_path: /home/noritsuna/pll/sample/gf180_pll_3v3/noritsuna/vco_inverter_end.sym
-** sch_path: /home/noritsuna/pll/sample/gf180_pll_3v3/noritsuna/vco_inverter_end.sch
+** sym_path: /home/noritsuna/pll/Chipathon2023_PLL_VCO/vco_inverter_end.sym
+** sch_path: /home/noritsuna/pll/Chipathon2023_PLL_VCO/vco_inverter_end.sch
 .subckt vco_inverter_end VDD VC_P A VC_N VSS
 *.PININFO VDD:B VSS:B A:I VC_N:I VC_P:I
-M1 net1 VC_P VDD VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
-M2 net2 A net1 VDD pfet_03v3 L=0.33u W=3.6u nf=1 m=1
-M3 net2 A net3 VSS nfet_03v3_dn L=0.33u W=1.4u nf=1 m=1
-M4 net3 VC_N VSS VSS nfet_03v3_dn L=0.33u W=0.7u nf=1 m=1
+M1 net1 VC_P VDD VDD pfet_03v3 L=0.33u W=0.9u nf=1 m=1
+M2 net2 A net1 VDD pfet_03v3 L=0.33u W=1.8u nf=1 m=1
+M3 net2 A net3 VSS nfet_03v3_dn L=0.33u W=0.84u nf=1 m=1
+M4 net3 VC_N VSS VSS nfet_03v3_dn L=0.33u W=0.42u nf=1 m=1
 .ends
 
 .end

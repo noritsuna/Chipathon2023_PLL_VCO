@@ -28,15 +28,15 @@ lab=#net3}
 N -10 -370 140 -370 {
 lab=#net3}
 N 70 -570 140 -570 {
-lab=vctrl}
+lab=VCTRL}
 N 140 -570 140 -410 {
-lab=vctrl}
+lab=VCTRL}
 N 80 -570 80 -550 {
-lab=vctrl}
+lab=VCTRL}
 N 80 -490 80 -460 {
 lab=GND}
 N 440 -390 470 -390 {
-lab=clk}
+lab=OUT}
 N 440 -430 440 -410 {
 lab=VDD}
 N 440 -370 440 -350 {
@@ -69,7 +69,7 @@ write vco_bench.raw
 C {devices/vdd.sym} 630 -740 0 0 {name=l13 lab=VDD}
 C {devices/gnd.sym} 630 -640 0 0 {name=l20 lab=GND}
 C {devices/vsource.sym} 630 -690 0 0 {name=Vdd value=vdd}
-C {devices/ipin.sym} 70 -570 0 0 {name=p2 lab=vctrl}
+C {devices/ipin.sym} 70 -570 0 0 {name=p2 lab=VCTRL}
 C {devices/vdd.sym} 440 -430 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} 440 -350 0 0 {name=l2 lab=GND}
 C {cs-vth-ref.sym} -1190 -360 0 0 {name=X7}
@@ -80,4 +80,4 @@ C {vco_pex.sym} 290 -390 0 0 {name=x9 prefix=TOP}
 C {devices/vsource.sym} 80 -520 0 0 {name=Vin value=Vin
 }
 C {devices/gnd.sym} 80 -460 0 0 {name=l5 lab=GND}
-C {devices/iopin.sym} 470 -390 0 0 {name=p3 lab=clk}
+C {devices/iopin.sym} 470 -390 0 0 {name=p3 lab=OUT}

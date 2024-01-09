@@ -1,0 +1,6 @@
+Vctrl=0.5V				Vctrl=1.7V				Vctrl=3.0V
+Temp=125, type=ss, VDD=3.0  37.36MHz						Temp=125, type=ss, VDD=3.0  62.54MHz
+Temp=27,  type=ss, VDD=3.3  33.43MHz
+Temp=27,  type=tt, VDD=3.3  35.50MHz	Temp=27,  type=tt, VDD=3.3  47.76MHz	Temp=27,  type=tt, VDD=3.3  64.06MHz
+Temp=27,  type=ff, VDD=3.3  38.79MHz
+Temp=-40, type=ff, VDD=3.6  36.02MHz						Temp=-40, type=ff, VDD=3.6  67.70MHz
