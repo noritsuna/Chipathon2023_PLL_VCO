@@ -45,24 +45,24 @@ C {devices/code_shown.sym} 30 -1120 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice ff
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
-.lib $::180MCU_MODELS/sm141064.ngspice res_typical
-.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice res_ff
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_ff
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_ff
 .include $::180MCU_STDCELLS/gf180mcu_fd_sc_mcu7t5v0.spice
 "}
 C {devices/code_shown.sym} 600 -870 0 0 {name=param only_toplevel=false value="
-.param vdd=3.3
-.param Vin=1.7"}
+.param vdd=3.6
+.param Vin=0.5"}
 C {devices/code_shown.sym} 30 -900 0 0 {name=NGSPICE only_toplevel=true
 value="
-*.option temp=27
-*.option tnom=27
+*.option temp=-40
+*.option tnom=-40
 .include ~/TOP_pex_extracted.spice
 .control
 save all
-tran  0.05n 1u
+tran  0.05n 220u
 write vco_bench.raw
 .endc
 "}

@@ -28,8 +28,6 @@ N 50 -240 70 -240 {
 lab=clk}
 N 50 -260 70 -260 {
 lab=data}
-N 910 -260 930 -260 {
-lab=#net3}
 N 1010 -210 1010 -150 {
 lab=6f}
 N 50 -310 1090 -310 {
@@ -37,15 +35,15 @@ lab=data}
 N 1090 -310 1090 -260 {
 lab=data}
 N 230 -200 350 -200 {
-lab=#net4}
+lab=#net3}
 N 230 -180 350 -180 {
-lab=#net5}
+lab=#net4}
 N 230 -160 350 -160 {
-lab=#net6}
+lab=#net5}
 N 230 -140 350 -140 {
-lab=#net7}
+lab=#net6}
 N -50 -170 70 -170 {
-lab=#net8}
+lab=#net7}
 N 570 -210 650 -210 {
 lab=GND}
 N 570 -220 570 -210 {
@@ -56,28 +54,26 @@ N 680 -200 750 -200 {
 lab=ctrl}
 N 680 -200 680 -180 {
 lab=ctrl}
-N 910 -260 910 -220 {
-lab=#net3}
-N 910 -220 980 -220 {
-lab=#net3}
 N 230 -160 230 -150 {
-lab=#net6}
+lab=#net5}
 N 230 -150 680 -150 {
-lab=#net6}
+lab=#net5}
 N 680 -160 680 -150 {
-lab=#net6}
+lab=#net5}
 N 230 -140 230 -130 {
-lab=#net7}
+lab=#net6}
 N 230 -130 680 -130 {
-lab=#net7}
+lab=#net6}
 N 680 -140 680 -130 {
-lab=#net7}
-N 980 -160 990 -160 {
-lab=#net3}
-N 990 -220 990 -160 {
-lab=#net3}
-N 980 -220 990 -220 {
-lab=#net3}
+lab=#net6}
+N 930 -260 930 -220 {
+lab=#net8}
+N 930 -220 1000 -220 {
+lab=#net8}
+N 1000 -220 1000 -160 {
+lab=#net8}
+N 980 -160 1000 -160 {
+lab=#net8}
 C {devices/code_shown.sym} 40 -550 0 0 {name=NGSPICE only_toplevel=true
 value="
 vpwr VDD 0 pulse(0 3.6 4n 1p 1p 200u 200u) dc 0
@@ -87,7 +83,7 @@ vext clk 0 pulse(0 3.6 4n 40p 40p 62.5n 125n) dc 0
 .include ~/TOP_pex_extracted.spice
 .control
 save all
-tran  0.05n 250u
+tran  0.05n 25u
 write pll_bench.raw
 .endc
 "}
@@ -104,7 +100,7 @@ C {sw.sym} 1070 -140 0 0 {name=x7}
 C {devices/gnd.sym} 1070 -80 0 0 {name=l4 lab=GND}
 C {devices/opin.sym} 1130 -150 0 0 {name=p1 lab=OUT}
 C {pfd2.sym} 150 -250 0 0 {name=x1}
-C {devices/opin.sym} 1010 -180 0 1 {name=p2 lab=6f}
+C {devices/opin.sym} 1010 -180 0 0 {name=p2 lab=6f}
 C {devices/code_shown.sym} 560 -550 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
